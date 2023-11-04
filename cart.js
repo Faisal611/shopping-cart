@@ -15,7 +15,37 @@
         const phoneTotalPrice  = document.getElementById(product + '-price');
         phoneTotalPrice.innerText = getAllValue * prices;
 
+        // calculation Amount
+        calculationTotal ()
+
     }
+
+    // calculation Total Amount
+    function calculationTotalInput (product) {
+        const productInput = document.getElementById(product + '-input');
+        const productTotalValue = parseFloat(productInput.value);
+        return productTotalValue;
+
+    }
+    function calculationTotal () {
+        const phoneTotalPrices = calculationTotalInput('phone') * 100;
+        const casePrices = calculationTotalInput('case') * 59;
+
+        const calculationTotalPrice = phoneTotalPrices + casePrices;
+        const PriceTax = phoneTotalPrices / 10;
+        const totalPriceAmount = calculationTotalPrice + PriceTax;
+
+        const calculationText =  document.getElementById('sub-Total');
+        const calculationTax =  document.getElementById('tax-price');
+        const calculationTotalAmount =  document.getElementById('total-price');
+
+
+        calculationText.innerText = calculationTotalPrice;
+        calculationTax.innerText = PriceTax;
+        calculationTotalAmount.innerText = totalPriceAmount;
+
+    }
+
 
 
 
