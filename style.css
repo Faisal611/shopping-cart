@@ -54,3 +54,17 @@ body{
 	background-color: #2FBE70;
 	border: none;
 }
+
+#countriesId{
+	display: grid;
+	grid-template-columns: repeat(3 , 1fr);
+	gap: 50px;
+
+}
+.class {
+	border: 1px solid tomato;
+	border-radius: 10px;
+	padding: 20px 50px;
+	margin: 20px 0;
+
+}
