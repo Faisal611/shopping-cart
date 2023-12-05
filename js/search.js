@@ -17,6 +17,7 @@ const searchLoad = () => {
 // Card Display
 const displaySearchResult = (meals) => {
     const searchResult = document.getElementById('card-fish-id');
+
     for (const meal of meals) {
         const div = document.createElement('div');
         div.classList.add('col');
@@ -33,8 +34,6 @@ const displaySearchResult = (meals) => {
         `;
 
         searchResult.appendChild(div);
-
-        console.log(meals)
 
     }
 
